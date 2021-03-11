@@ -2,7 +2,7 @@ function setup() {
 	
 
 	var c = createCanvas(1000, 1000) //width and height in pixels
-	background(120); //255=white;0=black
+	background(0); //255=white;0=black
 	
 
 	ellipse(450,450,100,100); //(left,right,height,width)
@@ -37,4 +37,4 @@ function mousePressed() {
 	//rRadius = random(50)+50
 	//ellipse(mouseX,mouseY,250,250);
 	//ellipse(mouseX,mouseY,rRadius,rRadius);
-//}
+}
