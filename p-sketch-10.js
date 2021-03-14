@@ -4,8 +4,8 @@ function setup() {
 	var c = createCanvas(1000, 1000); //width and height in pixels
 	background(255); //255=white;0=black
 	
-	//(left,top,width,height)
-			
+	//(x,y,w,h)
+	
 	fill(0);
 	rect(0,0,300,1000);
 	rect(700,0,300,1000);
