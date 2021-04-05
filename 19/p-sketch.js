@@ -2,7 +2,7 @@ let font, h1, h2, h2r, pLine, pLine2
 const loopDuration = 4 * 60
 
 function preload() {
-  font = loadFont('BauhausStd-Demi.otf')
+  font = loadFont('KinesisStd-Semibold.otf')
 }
 
 function setup() {
