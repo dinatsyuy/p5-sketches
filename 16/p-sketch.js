@@ -5,17 +5,16 @@ function setup() {
 	background(255); //255=white;0=black
 	
 	//(x,y,w,h)
-	
-	stroke(0);
-	noFill();
-	strokeWeight(8);
-
-	for (i=0;i<25;i++) {
-		var ellipseSize = 400+(i*20);
-		ellipse(500,500,ellipseSize,ellipseSize)
-	}
 
 
+	fill(0);
+	ellipse(500,500,800,800);
+	rect(100,100,400,800);
+
+	fill(255);
+	ellipse(500,500,700,700);
+
+}
 
 
 
