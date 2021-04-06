@@ -1,55 +1,59 @@
-function setup() {
-	
+let r = 1;
+let g = 1;
+let b = 1;
 
-	var c = createCanvas(1000, 1000); //width and height in pixels
-	background(255); //255=white;0=black
+let vp = 1;
+let hp = 1;
+
+function setup() {
+	createCanvas(1000, 1000);//width and height in pixels
+	background(255);
+	//255=white;0=black
+	frameRate(20);
+	noStroke();
+	rectMode(CENTER);
+	createLoop({duration:3, gif:true});
 	
 	//(x,y,w,h)
+
+
 	
-	stroke(0);
-	noFill();
-	strokeWeight(8);
 
-	for (i=0;i<25;i++) {
-		var ellipseSize = 400+(i*20);
-		ellipse(420,500,ellipseSize,ellipseSize)
-	}
-
-	noStroke();
+	fill(0);
+	ellipse (400,500,1000,1000);
 	fill(255);
-	rect (0,0,420,1000);
+	rect(0,0,800,2000);
+	
 
-	stroke(0);
-	noFill();
-	strokeWeight(8);
-
-	for (i=0;i<25;i++) {
-		var rectSize = 10+(i*10)
-		rect (170,60,rectSize,880)
-	}
+}
+	
+function draw() {
 
 
-	}
+	//r = random(0,255);
+	//g = random(0,255);
+	//b = random(0,255);
+	fill(0);
+	rect(50 * hp,50 * vp,100,100);
+
+	r = random(255);
+	//g = random(0,255);
+	//b = random(0,255);
+	fill(r);
+	ellipse(50 * hp,50 * vp,70);
+
+	hp = hp + 2;
+	if (hp > 8){
+		vp = vp + 2;
+		hp = 1;}
 
 
+}
+
+//Reference: https://www.youtube.com/watch?v=y4h9GSYUcmE&ab_channel=ShaunWegscheid
 
 
-
-
-
-
-
-	//var i = 0;
-
-	//while(i<100) {
-		//the "while" can be "for" as well: for(var i = 0;i<100; i++)
-		//add code here
-		//e.g. ellipse(10*i,10*i,250,250);
-		//e.g. ellipse(random(1000),random(1000),250,250);
-		//e.g. fill(random(255))
-		//i=i+1;
-	//}
-
+	
 
 
 function mousePressed() {

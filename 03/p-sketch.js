@@ -5,35 +5,22 @@ function setup() {
 	background(255); //255=white;0=black
 	
 	//(x,y,w,h)
-
-
 	
+	fill(0);
+	rect(0,0,300,1000);
+	rect(700,0,300,1000);
+	rect(0,0,1000,50);
+	rect(0,950,1000,50);
+	rect(650,50,50,50);
+	rect(650,900,50,50);
 
-	strokeWeight(10);
-	
-	noFill();
-	arc(500, 500, 480, 480, 250, HALF_PI);
-	arc(500, 500, 520, 520, 300, HALF_PI);
-	arc(500, 500, 560, 560, 100, HALF_PI);
-	arc(500, 500, 600, 600, 300, HALF_PI);
-	arc(500, 500, 640, 640, 250, HALF_PI);
-	arc(500, 500, 680, 680, 300, HALF_PI);
-	arc(500, 500, 720, 720, 200, HALF_PI);
-	arc(500, 500, 760, 760, 300, HALF_PI);
-	arc(500, 500, 800, 800, 250, HALF_PI);
-	//p5js.org,Reference, arc()
-
-	for (i=20;i<200;i++) {
-		line(200+i, 100, 200+i, 900);}
-
-	stroke(255);
-	strokeWeight(9);
-	line(270,150,270,850);
-
-	line(350,150,350,850);
+	fill(255);
+	noStroke(255);
+	rect(950,0,50,50)
+	rect(950,950,50,50);
+	}
 
 
-}
 
 
 

@@ -1,49 +1,43 @@
+let x=0
+
 function setup() {
 	
-
 	var c = createCanvas(1000, 1000); //width and height in pixels
 	background(255); //255=white;0=black
+	createLoop({duration:3, gif:true});
 	
 	//(x,y,w,h)
+}
+
+function draw() {
+	background(255);
+
 	
-	stroke(0);
+
+	for(let i=0;i<800;i+=10){
 	noFill();
+	stroke(192,24,35);
 	strokeWeight(4);
+	ellipse(500,500,i,i);
+	
+	
 
-	for (i=0;i<40;i++) {
-		var ellipseSize = 1000+(i*60);
-		ellipse(400,500,ellipseSize,ellipseSize)
-	}
-
-	noStroke();
-	fill(255);
-	rect (0,0,420,1000);
-
-	stroke(0);
 	noFill();
-	strokeWeight(4);
+	stroke(192,24,35);
+	strokeWeight(5);
+	rect(100,105,400,790);
 
-	for (i=0;i<300;i++) {
-		var rectSize = 10+(i*15)
-		rect (-10,-10,rectSize,1100)
-	}
 
-	stroke(0);
-	noFill();
-	strokeWeight(4);
-
-	for (i=0;i<300;i++) {
-		var rectSize = 10+(i*15)
-		rect (-680,-10,1100,rectSize)
-	}
-
+	stroke('blue');
+	strokeWeight(3);
+	ellipse(x,500,600-i,600,-i);
 
 	}
+	x=x+3
+}
 
-
-
-
-
+//Reference: https://www.youtube.com/watch?v=62SbexSgQIw&ab_channel=ByteSizeCoding
+	
 
 
 

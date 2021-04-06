@@ -5,35 +5,45 @@ function setup() {
 	background(255); //255=white;0=black
 	
 	//(x,y,w,h)
-
-
 	
-
-	strokeWeight(10);
-	
+	stroke(0);
 	noFill();
-	arc(500, 500, 480, 480, 250, HALF_PI);
-	arc(500, 500, 520, 520, 300, HALF_PI);
-	arc(500, 500, 560, 560, 100, HALF_PI);
-	arc(500, 500, 600, 600, 300, HALF_PI);
-	arc(500, 500, 640, 640, 250, HALF_PI);
-	arc(500, 500, 680, 680, 300, HALF_PI);
-	arc(500, 500, 720, 720, 200, HALF_PI);
-	arc(500, 500, 760, 760, 300, HALF_PI);
-	arc(500, 500, 800, 800, 250, HALF_PI);
-	//p5js.org,Reference, arc()
+	strokeWeight(4);
 
-	for (i=20;i<200;i++) {
-		line(200+i, 100, 200+i, 900);}
+	for (i=0;i<40;i++) {
+		var ellipseSize = 1000+(i*60);
+		ellipse(400,500,ellipseSize,ellipseSize)
+	}
 
-	stroke(255);
-	strokeWeight(9);
-	line(270,150,270,850);
+	noStroke();
+	fill(255);
+	rect (0,0,420,1000);
 
-	line(350,150,350,850);
+	stroke(0);
+	noFill();
+	strokeWeight(4);
+
+	for (i=0;i<300;i++) {
+		var rectSize = 10+(i*15)
+		rect (-10,-10,rectSize,1100)
+	}
+
+	stroke(0);
+	noFill();
+	strokeWeight(4);
+
+	for (i=0;i<300;i++) {
+		var rectSize = 10+(i*15)
+		rect (-680,-10,1100,rectSize)
+	}
 
 
-}
+	}
+
+
+
+
+
 
 
 
