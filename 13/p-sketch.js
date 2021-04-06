@@ -1,12 +1,50 @@
-//var circles = [];
+var circles = [];
 
 function setup() {
-	
-	Var c = CreateCanvas(1000, 1000); //width and height in pixels
+
+	var c = createCanvas(1000, 1000); //width and height in pixels
 	background(255);
-	//255=white;0=black
 	//(x,y,w,h)
-	//circles.push(new Circle(width / 2, height / 2, min(width, height) / 3));
+
+	var overlapping = false;
+
+	for (var i = 0; i < 25; i++) {
+		var circle = {
+			x: random(width),
+			y: random(height),
+			r: 36
+		};
+
+		var overlapping = false;
+
+		for (var j = 0; j < circles.length; i++) {
+			var other = circles[j];
+			var d = dist(circle.x, circle.y, other.x, other.y);
+			if (d < circle.r + other.r) {
+				overlapping = true;
+			}
+		}
+
+		if (!overlapping) {
+			circles.push(circle);
+		}
+
+		for (var i = 0; i < circles.length; i++) {
+		fill(192,24,35);
+		noStroke();
+		ellipse(circles[i].x, circles[i].y, circles[i].r*2, circles[i].r*2);
+		}
+
+	}
+	
+	
+}
+
+
+
+
+function draw() {
+
 }
 
 
@@ -16,11 +54,4 @@ function mousePressed() {
 	saveCanvas("sketch-", "png")
 }
 
-
-//function draw() {
-	//stroke(255)
-	//fill(255)
-	//nofill()
-	//rRadius = random(50)+50
-	//ellipse(mouseX,mouseY,50,50);
-	//ellipse(mouseX,mouseY,rRadius,rRadius);}
+//Reference: https://www.youtube.com/watch?v=XATr_jdh-44&t=899s&ab_channel=TheCodingTrain
