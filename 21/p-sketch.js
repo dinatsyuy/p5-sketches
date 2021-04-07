@@ -1,4 +1,5 @@
 let angle = 0;
+let angleV = 0.1;
 
 function setup() {
 	createCanvas(1000,1000);
@@ -6,22 +7,17 @@ function setup() {
 }
 
 function draw() {
- 	background(0,10);
-
+ 	background(0);
+ 	translate(700,0);
  	fill(255);
-	ellipse(500,500,800,800);
-	rect(100,100,400,800);
 
- 	translate(500,500);
- 	noStroke();
- 	fill(0);
- 	let r = sin(angle) * 350;
- 	circle(0,0,r*2);
-
- 
+ 	let y = map(sin(angle), -1, 1, 0, 1000);
+ 	stroke(255);
+ 	line(0,0,200,y);
+ 	circle(0,y,400);
 
 
- 	angle += 0.04;
+ 	angle += 0.08;
 }
 
 
