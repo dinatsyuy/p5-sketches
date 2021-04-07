@@ -37,8 +37,8 @@ function draw() {
 
 
 
-//function mousePressed() {
-	//saveCanvas("sketch-", "png")}
+function mousePressed() {
+	saveCanvas("sketch-", "png")}
 
 //Reference: Graphic Design 2: March 16, Instructor: Ali Qadeer.
 
