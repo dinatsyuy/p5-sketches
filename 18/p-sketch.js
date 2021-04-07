@@ -3,6 +3,7 @@ let angle = 0;
 function setup() {
 
 	createCanvas(1000,1000);
+	createLoop({duration:3, gif:true});
 }
 
 function draw() {
